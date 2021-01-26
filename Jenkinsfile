@@ -1,20 +1,13 @@
 pipeline {
 
-    environment { 
-        registry = "mfarmer5102/test" 
-        registryCredential = 'dockerhub_id' 
-        dockerImage = '' 
+    agent {
+        docker { image 'node:14-alpine' }
     }
-    
-    agent any
-
     stages {
-        stage('Building our image') { 
-            steps { 
-                script { 
-                    dockerImage = docker.build registry + ":$BUILD_NUMBER" 
-                }
-            } 
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
         }
     }
 
