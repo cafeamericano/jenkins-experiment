@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             steps{
                 script {
-                    dockerImage = docker.build apptest
+                    dockerImage = docker.build
                 }
             }
         }
