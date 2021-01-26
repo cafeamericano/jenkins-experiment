@@ -1,13 +1,19 @@
 pipeline {
-    agent any
 
-    tools {dockerTool "Docker"}
+    environment {
+        imagename = "mfarmer5102/jenkins-docker-test"
+        dockerImage = ''
+    }
+
+    agent any
 
     stages {
 
         stage('Build') {
-            steps {
-                sh 'docker build -t myapp:latest .' 
+            steps{
+                script {
+                    dockerImage = docker.build imagename
+                }
             }
         }
 
