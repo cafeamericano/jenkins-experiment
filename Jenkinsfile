@@ -1,5 +1,9 @@
 pipeline {
 
+    environment {
+        dockerImage = '' 
+    }
+
     agent any
 
     stages {
@@ -11,5 +15,5 @@ pipeline {
             } 
         }
     }
-    
+
 }
