@@ -13,5 +13,11 @@ pipeline {
       }
     }
 
+    stage('Run Locally') {
+      steps {
+        sh 'docker run --publish 8000:8000 myappdemo'
+      }
+    }
+
   }
 }
