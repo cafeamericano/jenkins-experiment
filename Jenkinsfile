@@ -13,11 +13,5 @@ pipeline {
       }
     }
 
-    stage('Run Locally') {
-      steps {
-        sh 'docker run --publish 7000:7000 myapp:latest'
-      }
-    }
-
   }
 }
