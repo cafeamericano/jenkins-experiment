@@ -31,21 +31,24 @@
 
     More information about shared dependencies can be found at https://single-spa.js.org/docs/recommended-setup#sharing-with-import-maps.
   -->
-  <script type="systemjs-importmap">
+  <!-- <script type="systemjs-importmap">
     {
       "imports": {
         "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
       }
     }
-  </script>
+  </script> -->
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js" as="script">
 
   <!-- Add your organization's prod import map URL to this script's src  -->
   <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
 
-  <% if (isLocal) { %>
+  <!-- <% if (isLocal) { %> -->
   <script type="systemjs-importmap" src="../importmap.json"></script>
-  <% } %>
+  <!-- <% } %> -->
+  <!-- <% if (!isLocal) { %> -->
+    <!-- <script type="systemjs-importmap" src="importmap.json"></script> -->
+  <!-- <% } %> -->
 
   <!--
     If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
@@ -76,6 +79,7 @@
   </template>
 </head>
 <body>
+  <h1>Hello world!</h1>
   <script>
     System.import('@mfarmer5102/root-config');
   </script>
