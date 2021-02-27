@@ -19,9 +19,15 @@ import { registerApplication, start } from "single-spa";
 // });
 
 registerApplication({
-    name: "@mfarmer5102/subapp",
-    app: () => System.import("@mfarmer5102/subapp"),
-    activeWhen: ["/subapp"],
+    name: "@mfarmer5102/subOne",
+    app: () => System.import("@mfarmer5102/subOne"),
+    activeWhen: ["/subOne"],
+});
+
+registerApplication({
+    name: "@mfarmer5102/subTwo",
+    app: () => System.import("@mfarmer5102/subTwo"),
+    activeWhen: ["/subTwo"],
 });
 
 start();
