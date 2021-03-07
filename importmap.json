@@ -5,7 +5,8 @@
     "react": "https://cdn.jsdelivr.net/npm/react@16.13.1/umd/react.production.min.js",
     "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16.13.1/umd/react-dom.production.min.js",
     "@mfarmer5102/root-config": "//localhost:9000/mfarmer5102-root-config.js",
-    "@mfarmer5102/subOne": "https://spatest.s3.amazonaws.com/dist/mfarmer5102-subOne.js",
-    "@mfarmer5102/subTwo": "//localhost:9002/mfarmer5102-subTwo.js"
+    "@mfarmer5102/aws": "https://spatest.s3.amazonaws.com/dist/mfarmer5102-platform.js",
+    "@mfarmer5102/platform": "//localhost:9003/index.js",
+    "@mfarmer5102/appContent": "//localhost:9002/index.js"
   }
 }
